@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h2 style="background-color: red">Array Destructuring in javascript</h2>
+    <script>
+      //var arr = [10, 20, 30, 40];
+      //   var arr = ["ajit", , "patna", "ram"];
+      //   let [a, b, c, d] = arr;
+      //   document.write(a);
+      //   document.write(c);
+
+      //var a, b;
+      //[a, b] = [100, 200];
+      //[a = 10, b = 20] = [50];
+      //document.write(a, b);
+
+      //   var arr = [10, 20, 30];
+      //   function show(a) {
+      //     document.write(a[0]);
+      //     document.write(a[1]);
+      //     document.write(a[2]);
+      //   }
+      //   show(arr);
+
+      //   var arr = [10, 20, 30, 40, 50, 60, 70, 80];
+      //   function show([value1, value2, value3, ...rest]) {
+      //     document.write(value1);
+      //     document.write(value2);
+      //     document.write(value3);
+      //     document.write(rest);
+      //   }
+      //   show(arr);
+
+      //   var arr = [10, 20, 30, 40];
+      //   function show(z) {
+      //     return z;
+      //   }
+      //   var newarr = show(arr);
+      //   document.write(newarr);
+
+      //   var arr = [10, 20, 30, 40];
+      //   function show(z) {
+      //     return z;
+      //   }
+      //   //   var newarr = show(arr);
+      //   //   var [value1, value2, value3, value4] = newarr;
+      //   var [value1, value2, value3, value3, value4] = show(arr);
+      //   document.write(value2);
+
+      var arr = ["ajit", "kumar", ["ram", "sonam"]];
+      var [value1, value2, [value3, value4]] = arr;
+      document.write(value4);
+    </script>
+  </body>
+</html>

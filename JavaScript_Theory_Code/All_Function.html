@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Function</title>
+  </head>
+  <body>
+    <h2>All Function in JavaScript concept</h2>
+
+    <script>
+      //   //(1)Function Declaration
+      //   function ajit(math, computer, english) {
+      //     var sum = math + computer + english;
+      //     return sum;
+      //   }
+      //   function percentage(total) {
+      //     var per = (total / 300) * 100;
+      //     document.write("Total Percentage of = " + per);
+      //   }
+
+      //   var sum_total = ajit(80, 100, 90);
+      //   percentage(sum_total);
+
+      //  //(2)Function Expression
+      //   const mukul_1 = function ajit(math, computer, english) {
+      //     var sum = math + computer + english;
+      //     return sum;
+      //   };
+      //   const mukul_2 = function percentage(total) {
+      //     var per = (total / 300) * 100;
+      //     document.write("Total Percentage of = " + per);
+      //   };
+
+      //   var sum_total = mukul_1(80, 90, 90);
+      //   mukul_2(sum_total);
+
+      //   //(3) Arrow Function
+      //   const ajit = (math, computer, english) => {
+      //     var sum = math + computer + english;
+      //     return sum;
+      //   };
+      //   const percentage = (total) => {
+      //     var per = (total / 300) * 100;
+      //     document.write("Total Percentage of = " + per);
+      //   };
+
+      //   var sum_total = ajit(70, 90, 95);
+      //   percentage(sum_total);
+
+      //   //(4)Anonymous Function
+      //   const ajit = function (math, computer, english) {
+      //     var sum = math + computer + english;
+      //     return sum;
+      //   };
+      //   const percentage = function (total) {
+      //     var per = (total / 300) * 100;
+      //     document.write("Total Percentage of = " + per);
+      //   };
+      //   var sum_total = ajit(80, 100, 90);
+      //   percentage(sum_total);
+
+      //(4)Anonymous Function
+      //   function ajit(percentage) {
+      //     var sum = 90 + 100 + 80;
+      //     return percentage(sum);
+      //   }
+      //   document.write(
+      //     ajit(function (total) {
+      //       var per = (total / 300) * 100;
+      //       return per;
+      //     })
+      //   );
+
+      //   //(5)Immediately invoked function Expression
+      //   (function () {
+      //     const ajit = function (math, computer, english) {
+      //       var sum = math + computer + english;
+      //       return sum;
+      //     };
+      //     const percentage = function (total) {
+      //       var per = (total / 300) * 100;
+      //       document.write("Total Percentage of = " + per);
+      //     };
+
+      //     var sum_total = ajit(80, 100, 90);
+      //     percentage(sum_total);
+      //   })();
+
+      //(5)Immediately invoked function Expression
+      //   (function (a, b) {
+      //     var sum = a + b;
+      //     document.write("Total sum of = " + sum);
+      //   })(20, 50);
+
+      //(6)Factory function
+      // function mobile(model_no) {
+      //   return {
+      //     model: model_no,
+      //     price: function () {
+      //       return "price is Rs:-2000";
+      //     },
+      //   };
+      // }
+      // var samsung = mobile("Galaxy");
+      // var nokia = mobile("  Nokia_10_J8");
+      // document.write(samsung.model + " " + samsung.price());
+      // document.write(nokia.model + " " + nokia.price());
+
+      //(7)Callback function
+      //   function percentage(total) {
+      //     var per = (total / 300) * 100;
+      //     document.write("Total Percentage of = " + per);
+      //   }
+      //   function ajit(callback) {
+      //     var m = 80,
+      //       c = 80,
+      //       e = 70;
+      //     var sum = m + c + e;
+      //     callback(sum);
+      //   }
+      //   ajit(percentage);
+
+      //(or)Callback function
+      // function show() {
+      //   document.write("i am show function");
+      // }
+      // function ajit(callback) {
+      //   callback();
+      // }
+      // ajit(show);
+
+      // //(or)Callback function
+      // function show(a) {
+      //   document.write("i am show function" + a);
+      // }
+      // function ajit(callback) {
+      //   var a = 100;
+      //   callback(a);
+      // }
+      // ajit(show);
+
+      // //(or)Callback function
+      // function show(a) {
+      //   document.write("i am show function" + a);
+      // }
+      // function ajit(a, callback) {
+      //   callback(a);
+      // }
+      // ajit(100, show);
+
+      //(or)Callback function
+      // function ajit(callback) {
+      //   var a = 100;
+      //   callback(a);
+      // }
+      // ajit(function show(a) {
+      //   document.write("i am show function" + a);
+      // });
+
+      //(or)Callback function
+      // function ajit(callback) {
+      //   var a = 200;
+      //   callback(a);
+      // }
+      // ajit(function (a) {
+      //   document.write("i am show function" + a);
+      // });
+
+      //(or)Callback function
+      // function ajit(callback) {
+      //   var a = 100;
+      //   callback(a);
+      // }
+      // ajit((a) => {
+      //   document.write("i am show function" + a);
+      // });
+
+      // //(or)Callback function in synchronous way
+      // function show() {
+      //   document.write("i am show function" + "<br>");
+      // }
+      // function ajit(callback) {
+      //   callback();
+      // }
+      // ajit(show);
+      // document.write("End");
+
+      //(or)Callback function in synchronous way
+      /*setTimeout(function show() {
+        document.write("i am show function" + "<br>");
+      }, 4000);
+      document.write("End");*/
+
+      //(8)Callback Hell / Asynchronous JS with Callback function both are same
+      const getRollNo = () => {
+        setTimeout(() => {
+          console.log("API getting roll no");
+          let roll_No = [1, 2, 3, 4, 5];
+          console.log(roll_No);
+
+          setTimeout(
+            (rollno) => {
+              const biodata = {
+                name: "ajit",
+                age: 25,
+              };
+              console.log(
+                `My roll No is ${rollno} . My Name is ${biodata.name} and I am ${biodata.age} your Old`
+              );
+
+              setTimeout(
+                (name) => {
+                  biodata.gender = "male";
+                  console.log(
+                    `my roll no is ${rollno} . my name is ${biodata.name} and I am ${biodata.age} years Old. I am an alpha ${biodata.gender}`
+                  );
+                },
+                2000,
+                biodata.name
+              );
+            },
+            2000,
+            roll_No[1]
+          );
+        }, 2000);
+      };
+      getRollNo();
+    </script>
+  </body>
+</html>

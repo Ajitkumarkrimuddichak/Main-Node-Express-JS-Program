@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Object in javascript</title>
+  </head>
+  <body>
+    <h2>All Object in JavaScript</h2>
+    <script>
+      //   const obj = {
+      //     name: "Ajit",
+      //     Lname: "kumar",
+      //     Address: "Patna",
+      //     Qulifitation: "B_Tech",
+      //     Branch: "CSE",
+      //     Current_city: "Bengaluru",
+      //     Mobile: 7870974578,
+      //   };
+      //   const x = obj;
+      //   x.name = "mukul";
+      //   document.write(obj.Mobile + " " + obj.name);
+
+      // Create an object:
+      //   const person = {
+      //     firstName: "Ajit",
+      //     lastName: "kumar",
+      //     id: 5566,
+      //     fullName: function () {
+      //       return (this.id + " " + this.lastName).toUpperCase();
+      //     },
+      //   };
+      //   const x = person.fullName();
+      //   document.write(x);
+
+      //   const person = {
+      //     firstName: "Ajit",
+      //     lastName: "kumar",
+      //     age: 30,
+      //     city: "New india",
+      //   };
+      //   let txt = "";
+      //   for (let x in person) {
+      //     txt += person[x];
+      //   }
+      //   document.write(txt);
+
+      // const person = {
+      //   firstName: "Ajit",
+      //   lastName: "kumar",
+      //   age: 30,
+      //   city: "New india",
+      // };
+      // const x = JSON.stringify(person);
+      // document.write(x);
+
+      //Objaect in Array
+      // var a = {
+      //   fname: "ajit",
+      //   lname: "kumar",
+      //   age: 24,
+      //   email: "kumarajir@455.gmail.com",
+      //   favmovies: ["patna", "gaya", "nalada"],
+      // };
+      // document.write(a + "<br>");
+      // document.write(a.favmovies[1]);
+
+      //object in object and function
+      // var a = {
+      //   fname: "ajit",
+      //   lname: "kumar",
+      //   living: { city: "patna", country: "india" },
+      //   salary: function () {
+      //     return 25000;
+      //   },
+      //   fullname: function () {
+      //     return this.fname + " " + this.lname;
+      //   },
+      // };
+      // document.write(a.living.country + "<br>");
+      // document.write(a.salary() + "<br>");
+      // document.write(a.fullname());
+
+      //Object Constructor
+      // var a = new Object();
+      // a.fname = "ajit";
+      // a.lname = "kumar";
+      // a.age = 25;
+      // a.addre = "patna";
+
+      // let txt = "";
+      // for (let x in a) {
+      //   txt += a[x];
+      // }
+      // document.write(typeof txt + "<br>");
+      // document.write(txt + "<br>");
+      // //document.write(a + "<br>");
+      // document.write(a.fname);
+
+      //Array of object
+      // var student = [
+      //   { fname: "Ram", age: 25 },
+      //   { fname: "Ajit", age: 24 },
+      //   { fname: "mukul", age: 23 },
+      // ];
+      // document.write(student + "<br>");
+      // for (var a = 0; a < student.length; a++) {
+      //   document.write(student[a].fname);
+      // }
+
+      //Redeclaration
+      // const a = {
+      //   name: "ajit",
+      //   age: 25,
+      // };
+      // document.write(a.name + "<br>");
+      // a.name = "mukul";
+      // document.write(a.name);
+
+      //for in loop only for used objectjj
+      // var obj = {
+      //   fname: "ajit",
+      //   lname: "kumar",
+      //   age: 24,
+      //   email: "kumar@10897gmai.com",
+      // };
+      // for (var key in obj) {
+      //   document.write(obj[key] + " " + "<br>");
+      // }
+
+      //Map method using object
+      // var ary = [11, 2, 5, 8, 44];
+      // var b = ary.map(test);
+      // document.write(b);
+      // function test(x) {
+      //   return x * 10;
+      // }
+
+      // const oldarr = ["ajit", "kumar", "mukul"];
+      // const newarr = oldarr.map(function (cav) {
+      //   return cav;
+      // });
+      // document.write(newarr);
+
+      // var ary = [
+      //   { fname: "ajit", lname: "kumar" },
+      //   { fname: "ram", lname: "ji" },
+      //   { fname: "sunita", lname: "jha" },
+      // ];
+      // var b = ary.map(test);
+      // document.write(b);
+      // function test(x) {
+      //   return x.fname + " " + x.lname;
+      // }
+
+      // const studentdata = [
+      //   { id: 1, name: "ajit", degree: "btech" },
+      //   { id: 2, name: "mukul", degree: "btech" },
+      //   { id: 3, name: "ram", degree: "btech" },
+      //   { id: 4, name: "shita", degree: "btech" },
+      // ];
+      // const newdata = studentdata.map((value) => {
+      //   return `my name is ${value.name}`;
+      // });
+      // document.write(newdata);
+
+      //How to create an object from pairs of key and value
+      const ArrData = (arr) => {
+        return Object.fromEntries(arr);
+      };
+      document.write(
+        ArrData(arr:[
+          ["a", 1],
+          ["b", 2],
+          ["c", 3],
+          ["d", 4],
+        ])
+      );
+    </script>
+  </body>
+</html>

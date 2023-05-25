@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <h2>Object Destructuring in javascript</h2>
+    <script>
+      //   var obj = {
+      //     courseName: "javascript",
+      //     duration: "Sixmonth",
+      //     author: "ajit",
+      //   };
+      //   //value = obj.courseName;
+      //   //document.write(value);
+      //   //document.write(obj.courseName);
+      //   var { courseName: cname, duration, author } = obj;
+      //   document.write(cname + "<br>");
+      //   document.write(author);
+
+      //   var obj = {
+      //     courseName: "javascript",
+      //     duration: "Sixmonth",
+      //     author: "ajit",
+      //   };
+      //   var { courseName, author } = obj;
+      //   document.write(author);
+
+      //var { a, b = 20 } = { a: 10 };
+      //var { a: y, b: z = 20 } = { a: 10 };
+      //document.write(a, b);
+      //document.write(y, z);
+
+      //   var obj = {
+      //     courseName: "javascript",
+      //     duration: "Sixmonth",
+      //     author: "ajit",
+      //   };
+      //   //   function show(a) {
+      //   //     document.write(a.courseName);
+      //   //   }
+      //   function show({ courseName, duration }) {
+      //     document.write(courseName);
+      //   }
+      //   show(obj);
+
+      //   //object returining from a function
+      //   var obj = {
+      //     courseName: "javascript",
+      //     duration: "Sixmonth",
+      //     author: "ajit",
+      //   };
+      //   function show(z) {
+      //     return z;
+      //   }
+      //   //   var x = show(obj);
+      //   //   var { courseName, duration, author } = x;
+      //   var { courseName, duration, author } = show(obj);
+      //   document.write(author);
+
+      //nested object
+      var obj = {
+        courseName: "javascript",
+        duration: "Sixmonth",
+        author: "ajit",
+        student: {
+          stu1: "ram",
+          stu2: "patna",
+        },
+      };
+      function show(z) {
+        return z;
+      }
+      var {
+        courseName,
+        duration,
+        author,
+        student: { stu1, stu2 },
+      } = show(obj);
+      document.write(stu1);
+    </script>
+  </body>
+</html>

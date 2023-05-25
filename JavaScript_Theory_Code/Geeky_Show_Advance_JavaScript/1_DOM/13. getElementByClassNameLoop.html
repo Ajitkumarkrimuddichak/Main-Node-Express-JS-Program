@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title class="jpnagar">Tree</title>
+  </head>
+  <body>
+    <h1>We are Learning JS</h1>
+    <h1 class="jpnagar myclass">Subscribe jpnagaryshows</h1>
+    <h2>Now</h2>
+    <p class="jpnagar">
+      Hello <span>jpnagaryshows</span> <em>World</em><span>croude</span>
+    </p>
+    <p class="myclass"><span>Bye</span> jpnagaryshows</p>
+    <div id="show">
+      <p>1st p inside div</p>
+      <p class="jpnagar">2nd p inside div</p>
+    </div>
+
+    <script>
+      // loop
+      /*      var result = document.getElementsByClassName("jpnagar")[0];
+        document.write(result);
+        console.log(result); 
+*/
+      var data = document.getElementsByClassName("jpnagar");
+      var len = data.length;
+      for (let i = 0; i < len; i++) {
+        var result = document.getElementsByClassName("jpnagar")[i];
+        document.write(result + "<br>");
+        console.log(result);
+      }
+      // for of loop
+      /*         for (const elm of data) {
+            document.write(elm + "<br>");
+            console.log(elm);
+        } */
+    </script>
+  </body>
+</html>

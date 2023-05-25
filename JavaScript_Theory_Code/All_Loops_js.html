@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Loops in Javascript</title>
+  </head>
+  <body>
+    <h2>All Loops in JavaScript</h2>
+    <script>
+      //   var x = 10;
+      //   for (var i = 0; i <= 9; i++) {
+      //     document.write(i + "<br>");
+      //   }
+
+      //   let a = 1;
+      //   while (a <= 10) {
+      //     document.write("Ajit kumar" + "<br>");
+      //     a = a + 1;
+      //   }
+
+      //   var x = 1;
+      //   do {
+      //     document.write(x + "Hello Ajit <br>");
+      //     x++;
+      //   } while (x <= 10);
+
+      //   const person = { fname: "John", lname: "Doe", age: 25 };
+      //   let text = "";
+      //   for (let x in person) {
+      //     text += person[x] + " ";
+      //   }
+      //   document.write(text);
+
+      //   const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      //   for (let x in cars) {
+      //    let text = "";
+      //    text += cars[x] + " ";
+      //   }
+      //   document.write(text);
+
+      //   const cars = ["BMW", "Volvo", "Mini"];
+      //   let text = "";
+      //   for (let x of cars) {
+      //     text += x;
+      //   }
+      //   document.write(text);
+
+      //   let sum = 0;
+      //   const numbers = [65, 44, 12, 4];
+      //   numbers.forEach(myFunction);
+
+      //   function myFunction(item) {
+      //     sum += item;
+      //   }
+      //   document.write(sum);
+
+      const numbers = [65, 44, 12, 4];
+      numbers.forEach(myFunction);
+      document.write(numbers);
+      function myFunction(item, index, arr) {
+        arr[index] = item * 10;
+      }
+    </script>
+  </body>
+</html>

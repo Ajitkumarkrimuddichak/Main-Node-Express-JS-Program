@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h3>
+      Thee Friend (1 javascript) and (2 php or express) and (3 JSON jo communite
+      karane ka kam karata hai)
+    </h3>
+    <h2>JSON Same (XML:-Old used) XML same like JSON</h2>
+
+    <script>
+      //Array of object
+      var jsonobject = {
+        FIFA: [
+          {
+            countaryname: "India",
+            Bestplayer: "Rohit",
+          },
+          {
+            countaryname: "USA",
+            Bestplayer: "Ronaldo",
+          },
+          {
+            countaryname: "Nepal",
+            Bestplayer: "suman",
+          },
+        ],
+      };
+      //document.write(jsonobject.FIFA[0].countaryname);
+      for (x in jsonobject.FIFA) {
+        //document.write(x);
+        for (inner_x in jsonobject.FIFA[x]) {
+          //document.write(inner_x + "<br>");
+          document.write(jsonobject.FIFA[x][inner_x] + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

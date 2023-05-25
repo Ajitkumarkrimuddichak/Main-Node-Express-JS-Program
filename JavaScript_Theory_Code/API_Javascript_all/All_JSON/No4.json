@@ -1,0 +1,22 @@
+{
+  "employee": [
+    {
+      "name": "Ajit kumar",
+      "age": 25
+    },
+    {
+      "name": "Sita kumari",
+      "age": 24
+    },
+
+    {
+      "name": "Ram kumar",
+      "age": 23
+    },
+
+    {
+      "name": "kumar",
+      "age": 22
+    }
+  ]
+}

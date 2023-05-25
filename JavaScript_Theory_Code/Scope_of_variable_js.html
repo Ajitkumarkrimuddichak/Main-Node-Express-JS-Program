@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable in javascript</title>
+  </head>
+  <body>
+    <h2>Variable in JavaScript</h2>
+    <script>
+      //(1) Functional and Block scope
+      function ajit(after) {
+        if (after) {
+          //and Block scope
+          var name = "mukul";
+          var sname = "kumar";
+          document.write(
+            `First name :-${name} and <br> surname :-${sname} <br>`
+          );
+        }
+        document.write(`First name :-${name} and <br> surname :-${sname}`);
+      }
+      ajit("nice");
+
+      //(2) local scope
+      //   var a = "us";
+      //   if (true) {
+      //     var a = "india";
+      //     document.write(a + "<br>");
+      //   }
+      //   document.write(a);
+
+      //(3) Block scope
+      //   function ajit(after) {
+      //     if (after) {
+      //       let name = "mukul";
+      //       const sname = "kumar";
+      //       document.write(name + "<br>" + sname);
+      //     }
+      //     //document.write(name + sname);//Global scope not access
+      //   }
+      //ajit("kkkk");
+
+      //(4) Global scope
+      //   const a = "aa_india";
+      //   let b = "bb_india";
+      //   if (true) {
+      //     const a = "aa_us";
+      //     let b = "bb_us";
+      //     document.write(`const value :-${a} and let value :-${b} <br>`);
+      //   }
+      //   document.write(`const value :-${a} and let value :-${b}`);
+    </script>
+  </body>
+</html>

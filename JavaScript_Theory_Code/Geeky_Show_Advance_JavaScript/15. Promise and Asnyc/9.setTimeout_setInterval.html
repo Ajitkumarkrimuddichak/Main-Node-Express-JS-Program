@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="mydata">I am ajit kumar</p>
+    <button onclick="startTimer()">see magic</button>
+    <script>
+      /*let mydata = document.querySelector("#mydata");
+      function welcome() {
+        mydata.innerHTML = `Hi mukul welcome`;
+      }
+      function startTimer() {
+        mydata.innerHTML = `Loading data ....`;
+        setTimeout(welcome, 1000);
+      }*/
+
+      //anonymous function
+      let mydata = document.querySelector("#mydata");
+
+      function startTimer() {
+        mydata.innerHTML = `Loading data ....`;
+        setTimeout(function () {
+          mydata.innerHTML = `Hi mukul kumar`;
+        }, 2000);
+      }
+    </script>-->
+
+    <!-- ####### start Timer or stop Timer ######-->
+    <p id="mydata">What is your name</p>
+    <button onclick="startTimer()">start Tmier</button>
+    <button onclick="stopTimer()">stop Tmier</button>
+    <script>
+      let mydata = document.querySelector("#mydata");
+      let num = 0;
+      let timerRef;
+      function startTimer() {
+        mydata.innerHTML = `Loding data ....`;
+        timerRef = setInterval(() => {
+          mydata.innerHTML = `I am cock number ${num}`;
+          num++;
+        }, 2000);
+      }
+      function stopTimer() {
+        clearInterval(timerRef);
+      }
+    </script>
+  </body>
+</html>

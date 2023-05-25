@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Method in javaScript</title>
+  </head>
+  <body>
+    <h2>Map Method in javaScript</h2>
+    <script>
+      //Stntex in map method
+      //map(callback(currentValue,index,array),thisArg);
+      //   var arr = [10, 20, 30, 40, 50];
+      //   var newarr = arr.map(function (value) {
+      //     document.write(value + "<br>");
+      //   });
+
+      //   var arr = [10, 20, 30, 40, 50];
+      //   var newarr = arr.map(function (value, i) {
+      //     document.write(i + "<br>");
+      //   });
+
+      //   var arr = [10, 20, 30, 40, 50];
+      //   var newarr = arr.map(function (value) {
+      //     value++;
+      //     return value;
+      //     //document.write(value + "<br>");
+      //   });
+      //   document.write(arr + "<br>");
+      //   document.write(newarr);
+
+      var arr = [
+        { price: "100", product: "mobile" },
+        { price: "500", product: "Laptop" },
+        { price: "4000", product: "mic" },
+        { price: "150", product: "pc" },
+      ];
+      //   arr.map(function (value) {
+      //     document.write(value + "<br>");
+      //     document.write(value.price);
+      //  });
+      var newArr = arr.map(function (value) {
+        return value.price;
+      });
+      document.write(newArr);
+    </script>
+  </body>
+</html>

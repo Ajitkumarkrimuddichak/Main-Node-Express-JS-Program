@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h3>
+      Thee Friend (1 javascript) and (2 php or express) and (3 JSON jo communite
+      karane ka kam karata hai)
+    </h3>
+    <h2>JSON Same (XML:-Old used) XML same like JSON</h2>
+
+    <script>
+      //Fatch data
+      var jsonobject = {
+        fname: "Ajit",
+        lname: "kumar",
+        age: 25,
+        profession: "webdeveloper",
+      };
+      //(2)Modify value
+      jsonobject.fname = "mukul kumar";
+
+      //(3)Add new key value pair
+      jsonobject.middelname = "patna bihar";
+
+      //(4)delete key value pair
+      delete jsonobject.middelname;
+
+      //(1)document.write(jsonobject.lname);
+      for (showalldata in jsonobject) {
+        //document.write(showalldata + "<br>");//print all key only
+        document.write(jsonobject[showalldata] + "<br>"); //print all value
+      }
+    </script>
+  </body>
+</html>

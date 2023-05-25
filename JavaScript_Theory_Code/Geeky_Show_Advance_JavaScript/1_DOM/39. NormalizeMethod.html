@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>show</title>
+  </head>
+  <body>
+    <div id="myid">
+      <h1>We are Learning JavaScript</h1>
+      <h1>I am h1</h1>
+    </div>
+    <script>
+      // Targeting Element where we will append New Nodes
+      var targetNode = document.getElementById("myid");
+
+      // Creating and Append New Text
+      targetNode.appendChild(document.createTextNode("Hello "));
+
+      // Creating and Append New Text
+      targetNode.appendChild(document.createTextNode("My Name "));
+
+      // Creating and Append New Text
+      targetNode.appendChild(document.createTextNode("is ajit kumar"));
+
+      // console.log(targetNode);
+
+      // Normalize Method
+      targetNode.normalize(); //Normalize Method Different Text To combine in one Text print
+      console.log(targetNode);
+    </script>
+  </body>
+</html>

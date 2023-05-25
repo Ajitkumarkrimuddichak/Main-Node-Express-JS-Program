@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modern Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lexend Deca Light";
+      }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+      p,
+      a,
+      li {
+        font-size: 1.7rem;
+        color: #20262e;
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+      }
+      .fa-bars {
+        font-size: 3.2rem;
+      }
+      header {
+        height: 10rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background-color: red; */
+      }
+      .navbar {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+      }
+      .nav-first {
+        width: 50%;
+        max-width: 52rem;
+        min-width: 32rem;
+        background-color: #655dbb;
+      }
+      .nav-second {
+        background-color: #3e54ac;
+        width: 95%;
+      }
+      .navbar-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        background-color: #ecf2ff;
+      }
+
+      .navbar-list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        list-style: none;
+      }
+      .navbar-list a {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+      }
+      .navbar-list a:hover {
+        text-decoration: underline;
+        color: #3e54ac;
+      }
+      .active {
+        transform: translateX(0);
+      }
+      .fa-square-xmark {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        font-size: 4.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">Ajit kumar</a>
+      </div>
+
+      <div class="menu">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+        <div class="navbar nav-first">
+          <div class="navbar nav-second">
+            <div class="navbar navbar-list">
+              <i class="fa-solid fa-square-xmark"></i>
+
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const open_menu = document.querySelector(".fa-bars");
+      const close_menu = document.querySelector(".fa-square-xmark");
+      const nav_active = document.querySelectorAll(".navbar");
+
+      open_menu.addEventListener("click", () => {
+        nav_active.forEach((elem) => elem.classList.add("active"));
+      });
+
+      close_menu.addEventListener("click", () => {
+        nav_active.forEach((elem) => elem.classList.remove("active"));
+      });
+    </script>
+  </body>
+</html>

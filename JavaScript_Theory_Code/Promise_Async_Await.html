@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body style="text-align: center">
+    <h2 style="background-color: aqua">
+      Promise and Async Await in JavaScript full concapt
+    </h2>
+    <script>
+      //   function myfun() {
+      //     console.log("Inside Function");
+      //   }
+      //   console.log("start");
+      //   myfun();
+      //   console.log("End");
+
+      //Asynchron way code run
+      //   console.log("Start");
+      //   setTimeout(() => {
+      //     console.log("Inside SetTimeout");
+      //   }, 2000);
+      //   console.log("End");
+
+      //callback functiopn
+      //   console.log("Start");
+      //   function getName(name, callback) {
+      //     setTimeout(() => {
+      //       console.log("Inside SetTimeout");
+      //       callback(name);
+      //     }, 3000);
+      //   }
+      //   const n = getName("Ajit", (n) => {
+      //     console.log(n);
+      //   });
+      //   console.log("End");
+
+      //or callback heal se bachane keliye used promise karete hai api me used
+      //   console.log("Start");
+      //   function getName(name, callback) {
+      //     setTimeout(() => {
+      //       console.log("Inside name SetTimeout");
+      //       callback(name);
+      //     }, 3000);
+      //   }
+
+      //   function getHobbies(name, callback) {
+      //     setTimeout(() => {
+      //       console.log("Inside Hobbies SetTimeout");
+      //       callback(["Cricket", "Dancing", "whaking"]);
+      //     }, 3000);
+      //   }
+      //   const n = getName("Ajit", (n) => {
+      //     console.log(n);
+      //     getHobbies(n, (hobby) => {
+      //       console.log(hobby);
+      //     });
+      //   });
+      //   console.log("End");
+
+      //Basic To Advance pormise consteract
+      //   const promiseObj1 = new Promise((resolve, reject) => {
+      //     let req = true;
+      //     //let req = false;
+      //     if (req == true) {
+      //       //   resolve("Request Success");
+      //       resolve([1, 2, 3, 4]);
+      //     } else {
+      //       reject("Request Rejected");
+      //     }
+      //   });
+      //   promiseObj1.then(
+      //     (value) => {
+      //       console.log(value);
+      //     },
+      //     (error) => {
+      //       console.log(error);
+      //     }
+      //   );
+
+      //   const promiseObj1 = new Promise((resolve, reject) => {
+      //     let req = true;
+      //     //let req = false;
+      //     if (req == true) {
+      //       //   resolve("Request Success");
+      //       resolve([1, 2, 3, 4, 5]);
+      //     } else {
+      //       reject("Request Rejected");
+      //     }
+      //   }).then(
+      //     (value) => {
+      //       console.log(value);
+      //     },
+      //     (error) => {
+      //       console.log(error);
+      //     }
+      //   );
+
+      //promise
+      //   const promiseObj1 = new Promise((resolve, reject) => {
+      //     let req = true;
+      //     //let req = false;
+      //     if (req == true) {
+      //       //   resolve("Request Success");
+      //       resolve([1, 2, 3, 4, 5]);
+      //     } else {
+      //       reject("Request Rejected");
+      //     }
+      //   })
+      //     .then((value) => {
+      //       console.log(value);
+      //     })
+      //     .catch((error) => {
+      //       console.log(error);
+      //     });
+
+      //method channing
+      //   const promiseObj = new Promise((resolve, reject) => {
+      //     let num = 10;
+      //     resolve(num);
+      //   })
+      //     .then((value) => {
+      //       console.log(value);
+      //       return value + 20;
+      //     })
+      //     .then((value) => {
+      //       console.log(value);
+      //     });
+
+      //Finally catch finally
+      //   const promiseObj1 = new Promise((resolve, reject) => {
+      //     let req = true;
+      //     //let req = false;
+      //     if (req == true) {
+      //       resolve("Request Success");
+      //     } else {
+      //       reject("Request Rejected");
+      //     }
+      //   })
+      //     .then((value) => {
+      //       console.log(value);
+      //     })
+      //     .catch((error) => {
+      //       console.log(error);
+      //     })
+      //     .finally(() => {
+      //       console.log("cleaned up");
+      //     });
+
+      //Promise
+      //   console.log("start");
+      //   function getName(name) {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         console.log("Inside Name setTimeOut");
+      //         resolve(name);
+      //       }, 2000);
+      //     });
+      //   }
+      //   function getHobbies(name) {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         console.log("Inside Hobbies setTimeOut");
+      //         resolve(["cricket", "Reading", "Dancing"]);
+      //       }, 1000);
+      //     });
+      //   }
+      //   getName("Ajit")
+      //     .then((nm) => getHobbies(nm))
+      //     .then((hobby) => console.log(hobby));
+      //   console.log("End");
+
+      //Async And Await
+      console.log("start");
+      function getName(name) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Inside Name setTimeOut");
+            resolve(name);
+          }, 2000);
+        });
+      }
+      function getHobbies(name) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Inside Hobbies setTimeOut");
+            resolve(["cricket", "Reading", "Dancing"]);
+          }, 1000);
+        });
+      }
+
+      async function showHobby() {
+        try {
+          const nm = await getName("Ajit kumar");
+          const hobby = await getHobbies(nm);
+          console.log(hobby);
+        } catch {
+          console.log("could not fetch Hobbies");
+        }
+      }
+      showHobby();
+
+      console.log("End");
+    </script>
+  </body>
+</html>
